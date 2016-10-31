@@ -11,11 +11,6 @@ DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 //////////////////////////////////////////////////////////////////////////
 // ATeamShrugCharacter
 
-void ATeamShrugCharacter::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
-{
-	UClass* MineClass = Other->GetClass();
-}
-
 ATeamShrugCharacter::ATeamShrugCharacter()
 {
 	// Set size for collision capsule
@@ -47,19 +42,28 @@ ATeamShrugCharacter::ATeamShrugCharacter()
 	FP_Gun->CastShadow = false;
 	// FP_Gun->SetupAttachment(Mesh1P, TEXT("GripPoint"));
 
-	// Allow hit events:
-	GetMesh()->SetNotifyRigidBodyCollision(true);
-
 	FP_MuzzleLocation = CreateDefaultSubobject<USceneComponent>(TEXT("MuzzleLocation"));
 	FP_MuzzleLocation->SetupAttachment(FP_Gun);
 	FP_MuzzleLocation->SetRelativeLocation(FVector(0.2f, 48.4f, -10.6f));
 
 	// Default offset from the character location for projectiles to spawn
 	GunOffset = FVector(100.0f, 30.0f, 10.0f);
+	DebugText = "Default";
 
 	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P are set in the
 	// derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
+
+void ATeamShrugCharacter::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{	
+	AMine* IsOtherMineCheck = Cast<AMine>(Other);
+
+	if (IsOtherMineCheck->IsValidLowLevel())
+	{
+		DebugText = "Dead";
+	}
+}
+
 
 void ATeamShrugCharacter::BeginPlay()
 {
