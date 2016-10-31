@@ -38,10 +38,10 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source\TeamShrug\Public">
-      <UniqueIdentifier>{0729155e-c1cc-4402-b8c7-acea59e49642}</UniqueIdentifier>
+      <UniqueIdentifier>{ab1a074f-4e33-4a08-968e-8e55ddf777e5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\TeamShrug\Private">
-      <UniqueIdentifier>{9b8ece28-e4b4-4d48-a62c-74786a339401}</UniqueIdentifier>
+      <UniqueIdentifier>{b185f4bf-de9b-4bff-9cbb-11027333922a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,372 @@
+﻿Log file open, 10/31/16 20:59:14
+LogInit:Display: Running engine for game: TeamShrug
+LogPlatformFile: Not using cached read wrapper
+LogInit:Display: RandInit(-959953302) SRandInit(-959953300).
+LogTaskGraph: Started task graph with 4 named threads and 7 total threads with 1 sets of task threads.
+LogStats: Stats thread started at 0.242963
+LogInit: Version: 4.12.5-3039270+++UE4+Release-4.12
+LogInit: API Version: 2992821
+LogInit: Net Version: 3039270
+LogDevObjectVersion: Number of dev versions registered: 13
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 3
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 1
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 2
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 6
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 0
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 2
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 0
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 0
+LogInit: Compiled (64-bit): Jul  6 2016 09:09:46
+LogInit: Compiled with Visual C++: 19.00.23026.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.12
+LogInit: Command line: 
+LogInit: Base directory: C:/Program Files (x86)/Epic Games/4.12/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogInit: Using libcurl 7.41.0
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with WinSSL
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2016.10.31-20.59.15:232][  0]LogInit: Selected Device Profile: [Windows]
+[2016.10.31-20.59.15:232][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2016.10.31-20.59.15:247][  0]LogInit: Computer: JAMESM-PC
+[2016.10.31-20.59.15:247][  0]LogInit: User: JamesMoran
+[2016.10.31-20.59.15:247][  0]LogInit: CPU Page size=65536, Cores=4
+[2016.10.31-20.59.15:247][  0]LogInit: High frequency timer resolution =3.222657 MHz
+[2016.10.31-20.59.15:248][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2016.10.31-20.59.15:248][  0]LogMemory: Platform Memory Stats for Windows
+[2016.10.31-20.59.15:248][  0]LogMemory: Process Physical Memory: 190.08 MB used, 190.08 MB peak
+[2016.10.31-20.59.15:248][  0]LogMemory: Process Virtual Memory: 195.50 MB used, 195.50 MB peak
+[2016.10.31-20.59.15:249][  0]LogMemory: Physical Memory: 8629.41 MB used, 16277.10 MB total
+[2016.10.31-20.59.15:249][  0]LogMemory: Virtual Memory: 552.96 MB used, 134217728.00 MB total
+[2016.10.31-20.59.15:715][  0]LogTextLocalizationManager: No specific translations for ('en-GB') exist, so ('en') translations will be used.
+[2016.10.31-20.59.16:117][  0]LogD3D11RHI: D3D11 adapters:
+[2016.10.31-20.59.16:151][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 760' (Feature Level 11_0)
+[2016.10.31-20.59.16:151][  0]LogD3D11RHI:       2017/0/8138 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
+[2016.10.31-20.59.16:174][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 4600' (Feature Level 11_0)
+[2016.10.31-20.59.16:174][  0]LogD3D11RHI:       112/0/2048 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
+[2016.10.31-20.59.16:179][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2016.10.31-20.59.16:180][  0]LogD3D11RHI:       0/0/8138 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2016.10.31-20.59.16:180][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2016.10.31-20.59.16:186][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2016.10.31-20.59.16:186][  0]LogD3D11RHI:     GPU DeviceId: 0x1187 (for the marketing name, search the web for "GPU Device Id")
+[2016.10.31-20.59.16:186][  0]LogWindows: EnumDisplayDevices:
+[2016.10.31-20.59.16:186][  0]LogWindows:    0. 'NVIDIA GeForce GTX 760' (P:1 D:1)
+[2016.10.31-20.59.16:187][  0]LogWindows:    1. 'NVIDIA GeForce GTX 760' (P:0 D:0)
+[2016.10.31-20.59.16:187][  0]LogWindows:    2. 'NVIDIA GeForce GTX 760' (P:0 D:0)
+[2016.10.31-20.59.16:187][  0]LogWindows:    3. 'NVIDIA GeForce GTX 760' (P:0 D:0)
+[2016.10.31-20.59.16:187][  0]LogWindows:    4. 'Intel(R) HD Graphics 4600' (P:0 D:0)
+[2016.10.31-20.59.16:188][  0]LogWindows:    5. 'Intel(R) HD Graphics 4600' (P:0 D:0)
+[2016.10.31-20.59.16:188][  0]LogWindows:    6. 'Intel(R) HD Graphics 4600' (P:0 D:0)
+[2016.10.31-20.59.16:188][  0]LogWindows: DebugString: PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter FoundDriverCount:4 
+[2016.10.31-20.59.16:188][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 760
+[2016.10.31-20.59.16:188][  0]LogD3D11RHI:   Driver Version: 369.09 (internal:21.21.13.6909, unified:369.09)
+[2016.10.31-20.59.16:188][  0]LogD3D11RHI:      Driver Date: 8-1-2016
+[2016.10.31-20.59.16:188][  0]LogRHI: Texture pool is 1361 MB (70% of 1945 MB)
+[2016.10.31-20.59.16:205][  0]LogD3D11RHI: Async texture creation enabled
+[2016.10.31-20.59.16:215][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2016.10.31-20.59.16:215][  0]LogShaderCompilers: Guid format shader working directory is -22 characters bigger than the processId version (../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Intermediate/Shaders/WorkingDirectory/13140/).
+[2016.10.31-20.59.16:216][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/JAMESM~1/AppData/Local/Temp/UnrealShaderWorkingDir/40A7B43F4992C7C9B94DC994BA0CCCC7/'.
+[2016.10.31-20.59.16:216][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
+[2016.10.31-20.59.17:779][  0]LogTemp:Display: Loaded TP AllDesktopTargetPlatform
+[2016.10.31-20.59.17:826][  0]LogTemp:Display: Loaded TP WindowsClientTargetPlatform
+[2016.10.31-20.59.17:866][  0]LogTemp:Display: Loaded TP WindowsNoEditorTargetPlatform
+[2016.10.31-20.59.17:929][  0]LogTemp:Display: Loaded TP WindowsServerTargetPlatform
+[2016.10.31-20.59.17:993][  0]LogTemp:Display: Loaded TP WindowsTargetPlatform
+[2016.10.31-20.59.18:073][  0]LogTemp:Display: Loaded TP AndroidTargetPlatform
+[2016.10.31-20.59.18:128][  0]LogTemp:Display: Loaded TP Android_ASTCTargetPlatform
+[2016.10.31-20.59.18:141][  0]LogTemp:Display: Loaded TP Android_ATCTargetPlatform
+[2016.10.31-20.59.18:154][  0]LogTemp:Display: Loaded TP Android_DXTTargetPlatform
+[2016.10.31-20.59.18:168][  0]LogTemp:Display: Loaded TP Android_ETC1TargetPlatform
+[2016.10.31-20.59.18:181][  0]LogTemp:Display: Loaded TP Android_ETC2TargetPlatform
+[2016.10.31-20.59.18:231][  0]LogTemp:Display: Loaded TP Android_MultiTargetPlatform
+[2016.10.31-20.59.18:231][  0]LogTemp:Display: Loaded TP Android_PVRTCTargetPlatform
+[2016.10.31-20.59.18:239][  0]LogTemp:Display: Loaded TP HTML5TargetPlatform
+[2016.10.31-20.59.18:460][  0]LogTemp:Display: Loaded TP IOSTargetPlatform
+[2016.10.31-20.59.18:473][  0]LogTemp:Display: Loaded TP TVOSTargetPlatform
+[2016.10.31-20.59.18:507][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
+[2016.10.31-20.59.18:520][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
+[2016.10.31-20.59.18:534][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
+[2016.10.31-20.59.18:534][  0]LogTargetPlatformManager:Display: Building Assets For Windows
+[2016.10.31-20.59.19:604][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
+[2016.10.31-20.59.19:663][  0]LogDerivedDataCache: Loaded boot cache 0.06s 62MB C:/Users/James Moran/AppData/Local/UnrealEngine/4.12/DerivedDataCache/Boot.ddc.
+[2016.10.31-20.59.19:663][  0]LogDerivedDataCache:Display: Loaded Boot cache: C:/Users/James Moran/AppData/Local/UnrealEngine/4.12/DerivedDataCache/Boot.ddc
+[2016.10.31-20.59.19:663][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2016.10.31-20.59.19:663][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2016.10.31-20.59.19:663][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2016.10.31-20.59.19:663][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2016.10.31-20.59.19:679][  0]LogDerivedDataCache:Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2016.10.31-20.59.19:692][  0]LogDerivedDataCache: Using Local data cache path C:/Users/James Moran/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2016.10.31-20.59.19:868][  0]LogInit: Selected Device Profile: [Windows]
+[2016.10.31-20.59.19:868][  0]LogContentStreaming: Texture pool size is 0.00 MB
+[2016.10.31-20.59.20:157][  0]LogMeshUtilities: No automatic mesh reduction module available
+[2016.10.31-20.59.20:157][  0]LogMeshUtilities: No automatic mesh merging module available
+[2016.10.31-20.59.20:157][  0]LogMeshUtilities: No distributed automatic mesh merging module available
+[2016.10.31-20.59.20:529][  0]LogAssetRegistry: FAssetRegistry took 0.0238 seconds to start up
+[2016.10.31-20.59.20:556][  0]LogPackageLocalizationCache: Processed 3 localized package path(s) for 2 prioritized culture(s) in 0.023397 seconds
+[2016.10.31-20.59.20:561][  0]LogUObjectArray: 28739 objects as part of root set at end of initial load.
+[2016.10.31-20.59.20:561][  0]LogUObjectAllocator: 5855624 out of 0 bytes used by permanent object pool.
+[2016.10.31-20.59.20:561][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2016.10.31-20.59.20:609][  0]LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[2016.10.31-20.59.26:029][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2016.10.31-20.59.26:029][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2016.10.31-20.59.27:722][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2016.10.31-20.59.30:773][  0]LogTexture:Display: Building textures: T_ML_Rubber_Blue_01_D (AutoDXT)
+[2016.10.31-20.59.36:438][  0]LogTexture:Display: Building textures: T_ML_Rubber_Blue_01_N (BC5)
+[2016.10.31-20.59.37:179][  0]LogTexture:Display: Building textures: T_ML_Aluminum01 (AutoDXT)
+[2016.10.31-20.59.43:261][  0]LogTexture:Display: Building textures: T_ML_Aluminum01_N (BC5)
+[2016.10.31-20.59.43:959][  0]LogTexture:Display: Building textures: UE4_Mannequin_MAT_MASKA (AutoDXT)
+[2016.10.31-20.59.44:405][  0]LogTexture:Display: Building textures: UE4_Mannequin__normals (BC5)
+[2016.10.31-20.59.44:984][  0]LogTexture:Display: Building textures: UE4_LOGO_CARD (AutoDXT)
+[2016.10.31-20.59.45:338][  0]LogTexture:Display: Building textures: T_FPGun_N (BC5)
+[2016.10.31-20.59.45:920][  0]LogTexture:Display: Building textures: T_FPGun_M (AutoDXT)
+[2016.10.31-20.59.46:975][  0]LogTexture:Display: Building textures: T_ML_Aluminum01_N (BC5)
+[2016.10.31-20.59.47:850][  0]LogTexture:Display: Building textures: T_ML_Aluminum01 (AutoDXT)
+[2016.10.31-20.59.53:583][  0]LogTexture:Display: Building textures: T_ML_Rubber_Blue_01_N (BC5)
+[2016.10.31-20.59.54:276][  0]LogTexture:Display: Building textures: T_ML_Rubber_Blue_01_D (AutoDXT)
+[2016.10.31-20.59.59:680][  0]LogTexture:Display: Building textures: FirstPersonCrosshair (AutoDXT)
+[2016.10.31-21.00.01:349][  0]SourceControl: Info Source control is disabled
+[2016.10.31-21.00.01:350][  0]SourceControl: Info Source control is disabled
+[2016.10.31-21.00.01:392][  0]SourceControl: Info Source control is disabled
+[2016.10.31-21.00.01:518][  0]SourceControl: Info Source control is disabled
+[2016.10.31-21.00.03:041][  0]LogEngine: Initializing Engine...
+[2016.10.31-21.00.03:045][  0]LogHMD: SteamVR failed to initialize.  Err: 110
+[2016.10.31-21.00.03:049][  0]LogHMD: SteamVR failed to initialize.  Err: 110
+[2016.10.31-21.00.03:269][  0]LogAIModule: Creating AISystem for world NewWorld
+[2016.10.31-21.00.03:294][  0]LogInit: XAudio2 using 'Speakers (Raptor HS40)' : 2 channels at 44.1 kHz using 16 bits per sample (channel mask 0x3)
+[2016.10.31-21.00.03:313][  0]LogInit: FAudioDevice initialized.
+[2016.10.31-21.00.03:359][  0]LogDerivedDataCache: Saved boot cache 0.05s 102MB C:/Users/James Moran/AppData/Local/UnrealEngine/4.12/DerivedDataCache/Boot.ddc.
+[2016.10.31-21.00.03:367][  0]LogInit: Texture streaming: Enabled
+[2016.10.31-21.00.03:759][  0]LogInit: Transaction tracking system initialized
+[2016.10.31-21.00.04:389][  0]BlueprintLog: New page: Editor Load
+[2016.10.31-21.00.06:873][  0]LocalizationService: Info Localization service is disabled
+[2016.10.31-21.00.08:290][  0]LogConsoleResponse:Display: 
+[2016.10.31-21.00.08:483][  0]LogCook:Display: Max memory allowance for cook 8192mb
+[2016.10.31-21.00.08:483][  0]LogCook:Display: Mobile HDR setting 1
+[2016.10.31-21.00.09:119][  0]LogFileCache: Scanning file cache for directory 'C:/Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/' took 0.09s
+[2016.10.31-21.00.09:679][  0]SourceControl: Info Source control is disabled
+[2016.10.31-21.00.09:679][  0]Cmd: MAP LOAD FILE="../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2016.10.31-21.00.09:696][  0]LightingResults: New page: Lighting Build
+[2016.10.31-21.00.09:700][  0]MapCheck: New page: Map Check
+[2016.10.31-21.00.09:700][  0]LightingResults: New page: Lighting Build
+[2016.10.31-21.00.10:047][  0]LogTexture:Display: Building textures: HQ_Lightmap0_5 (AutoDXT)
+[2016.10.31-21.00.10:962][  0]LogTexture:Display: Building textures: HQ_Lightmap0_6 (AutoDXT)
+[2016.10.31-21.00.11:823][  0]LogTexture:Display: Building textures: HQ_Lightmap0_8 (AutoDXT)
+[2016.10.31-21.00.11:864][  0]LogTexture:Display: Building textures: HQ_Lightmap1_1 (AutoDXT)
+[2016.10.31-21.00.12:391][  0]LogTexture:Display: Building textures: HQ_Lightmap1_2 (AutoDXT)
+[2016.10.31-21.00.12:907][  0]LogTexture:Display: Building textures: HQ_Lightmap1_3 (AutoDXT)
+[2016.10.31-21.00.13:525][  0]LogTexture:Display: Building textures: HQ_Lightmap1_4 (AutoDXT)
+[2016.10.31-21.00.14:009][  0]LogTexture:Display: Building textures: HQ_Lightmap1_7 (AutoDXT)
+[2016.10.31-21.00.14:594][  0]LogTexture:Display: Building textures: LQ_Lightmap_0_5 (DXT1)
+[2016.10.31-21.00.14:942][  0]LogTexture:Display: Building textures: LQ_Lightmap_0_6 (DXT1)
+[2016.10.31-21.00.15:224][  0]LogTexture:Display: Building textures: LQ_Lightmap_0_8 (DXT1)
+[2016.10.31-21.00.15:260][  0]LogTexture:Display: Building textures: LQ_Lightmap_1_1 (DXT1)
+[2016.10.31-21.00.15:467][  0]LogTexture:Display: Building textures: LQ_Lightmap_1_2 (DXT1)
+[2016.10.31-21.00.15:675][  0]LogTexture:Display: Building textures: LQ_Lightmap_1_3 (DXT1)
+[2016.10.31-21.00.15:881][  0]LogTexture:Display: Building textures: LQ_Lightmap_1_4 (DXT1)
+[2016.10.31-21.00.16:097][  0]LogTexture:Display: Building textures: LQ_Lightmap_1_7 (DXT1)
+[2016.10.31-21.00.16:326][  0]LogTexture:Display: Building textures: SkyOcclusion0_5 (AutoDXT)
+[2016.10.31-21.00.16:706][  0]LogTexture:Display: Building textures: SkyOcclusion0_6 (AutoDXT)
+[2016.10.31-21.00.17:082][  0]LogTexture:Display: Building textures: SkyOcclusion1_1 (AutoDXT)
+[2016.10.31-21.00.17:320][  0]LogTexture:Display: Building textures: SkyOcclusion1_2 (AutoDXT)
+[2016.10.31-21.00.17:557][  0]LogTexture:Display: Building textures: SkyOcclusion1_3 (AutoDXT)
+[2016.10.31-21.00.17:789][  0]LogTexture:Display: Building textures: SkyOcclusion1_4 (AutoDXT)
+[2016.10.31-21.00.18:047][  0]LogTexture:Display: Building textures: SkyOcclusion1_7 (AutoDXT)
+[2016.10.31-21.00.18:322][  0]LogTexture:Display: Building textures: SkyOcclusion1_8 (AutoDXT)
+[2016.10.31-21.00.18:330][  0]LogTexture:Display: Building textures: ShadowMapTexture2D_10 (G8)
+[2016.10.31-21.00.18:390][  0]LogTexture:Display: Building textures: ShadowMapTexture2D_11 (G8)
+[2016.10.31-21.00.18:454][  0]LogTexture:Display: Building textures: ShadowMapTexture2D_12 (G8)
+[2016.10.31-21.00.18:514][  0]LogTexture:Display: Building textures: ShadowMapTexture2D_13 (G8)
+[2016.10.31-21.00.18:521][  0]LogTexture:Display: Building textures: ShadowMapTexture2D_4 (G8)
+[2016.10.31-21.00.18:579][  0]LogTexture:Display: Building textures: ShadowMapTexture2D_5 (G8)
+[2016.10.31-21.00.18:640][  0]LogTexture:Display: Building textures: ShadowMapTexture2D_8 (G8)
+[2016.10.31-21.00.18:700][  0]LogTexture:Display: Building textures: ShadowMapTexture2D_9 (G8)
+[2016.10.31-21.00.18:771][  0]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2016.10.31-21.00.18:783][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2016.10.31-21.00.18:787][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2016.10.31-21.00.18:837][  0]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 49.574ms to complete.
+[2016.10.31-21.00.18:837][  0]LogFileHelpers: Loading map 'FirstPersonExampleMap' took 9.158
+[2016.10.31-21.00.19:103][  0]LogCollectionManager: Loaded 0 collections in 0.002815 seconds
+[2016.10.31-21.00.19:138][  0]LogFileCache: Scanning file cache for directory 'C:/Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Saved/Collections/' took 0.01s
+[2016.10.31-21.00.19:138][  0]LogFileCache: Scanning file cache for directory 'C:/Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/Developers/JamesMoran/Collections/' took 0.01s
+[2016.10.31-21.00.19:138][  0]LogFileCache: Scanning file cache for directory 'C:/Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/Collections/' took 0.00s
+[2016.10.31-21.00.19:138][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000002 seconds
+[2016.10.31-21.00.19:148][  0]LogContentBrowser: Native class hierarchy populated in 0.0100 seconds. Added 2051 classes and 371 folders.
+[2016.10.31-21.00.19:153][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2016.10.31-21.00.19:154][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2016.10.31-21.00.19:158][  0]LogContentBrowser: Native class hierarchy updated for 'GameplayTags' in 0.0030 seconds. Added 12 classes and 0 folders.
+[2016.10.31-21.00.19:170][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0016 seconds. Added 0 classes and 0 folders.
+[2016.10.31-21.00.19:236][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0017 seconds. Added 0 classes and 0 folders.
+[2016.10.31-21.00.19:443][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0019 seconds. Added 1 classes and 2 folders.
+[2016.10.31-21.00.19:570][  0]LogCrashTracker: Crashtracker disabled due to settings.
+[2016.10.31-21.00.19:576][  0]LogUObjectGlobals:Warning: Failed to find object 'Class None.'
+[2016.10.31-21.00.19:767][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0015 seconds. Added 1 classes and 2 folders.
+[2016.10.31-21.00.19:768][  0]LogLoad: Full Startup: 66.33 seconds (BP compile: 0.08 seconds)
+[2016.10.31-21.00.19:768][  0]LogExternalProfiler: Found external profiler: VSPerf
+[2016.10.31-21.00.19:768][  0]LogExternalProfiler: Using external profiler: VSPerf
+[2016.10.31-21.00.19:777][  0]LogWindowsTextInputMethodSystem:Display: IME system now deactivated.
+[2016.10.31-21.00.19:777][  0]LogOcInput: OculusInput pre-init called
+[2016.10.31-21.00.19:796][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2016.10.31-21.00.19:945][  0]LogRenderer: Reallocating scene render targets to support 1208x576 (Frame:2).
+[2016.10.31-21.00.20:059][  1]LogAssetRegistry: Asset discovery search completed in 59.5529 seconds
+[2016.10.31-21.00.20:059][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000010 seconds (found 0 objects)
+[2016.10.31-21.00.20:059][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000339 seconds (updated 0 objects)
+[2016.10.31-21.00.25:129][526]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0019 seconds. Added 111 classes and 0 folders.
+[2016.10.31-21.00.25:611][526]LogTexture:Display: Building textures: TilePatine_N (BC5)
+[2016.10.31-21.00.25:677][526]LogTexture:Display: Building textures: TilePatine_D (AutoDXT)
+[2016.10.31-21.06.53:079][314]Running C:/Program Files (x86)/Epic Games/4.12/Engine/Binaries/DotNET/UnrealBuildTool.exe TeamShrug Win64 Development -editorrecompile "C:/Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/TeamShrug.uproject" -invalidatemakefilesonly
+[2016.10.31-21.06.53:488][314]Invalidating makefiles only in this run.
+[2016.10.31-21.06.53:729][314]Recompiling TeamShrug...
+[2016.10.31-21.06.53:730][314]Launching UnrealBuildTool... [C:/Program Files (x86)/Epic Games/4.12/Engine/Binaries/DotNET/UnrealBuildTool.exe TeamShrug -ModuleWithSuffix TeamShrug 7062 Win64 Development -editorrecompile -canskiplink "C:/Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/TeamShrug.uproject"  -2015]
+[2016.10.31-21.07.17:919][314]CompilerResultsLog: New page: Compilation - 31 Oct 2016 21:07:17
+[2016.10.31-21.07.17:920][314]CompilerResultsLog: Info Performing full C++ include scan (hot reloading a new target)
+[2016.10.31-21.07.17:920][314]CompilerResultsLog: Info Creating makefile for hot reloading TeamShrug (no existing makefile)
+[2016.10.31-21.07.17:920][314]CompilerResultsLog: Info Compiling game modules for hot reload
+[2016.10.31-21.07.17:920][314]CompilerResultsLog: Info Parsing headers for TeamShrugEditor
+[2016.10.31-21.07.17:920][314]CompilerResultsLog: Info   Running UnrealHeaderTool "C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\TeamShrug.uproject" "C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\Build\Win64\TeamShrugEditor\Development\TeamShrugEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2016.10.31-21.07.17:920][314]CompilerResultsLog: Info Reflection code generated for TeamShrugEditor in 2.7474791 seconds
+[2016.10.31-21.07.17:920][314]CompilerResultsLog: Info Performing 11 actions (4 in parallel)
+[2016.10.31-21.07.17:920][314]CompilerResultsLog: Info [2/11] Resource PCLaunch.rc
+[2016.10.31-21.07.17:921][314]CompilerResultsLog: Info [3/11] Resource ModuleVersionResource.rc.inl
+[2016.10.31-21.07.17:921][314]CompilerResultsLog: Info PCH.TeamShrug.h.cpp
+[2016.10.31-21.07.17:921][314]CompilerResultsLog: Info TeamShrugHUD.cpp
+[2016.10.31-21.07.17:921][314]CompilerResultsLog: Info TeamShrugCharacter.cpp
+[2016.10.31-21.07.17:921][314]CompilerResultsLog: Info TeamShrugGameMode.cpp
+[2016.10.31-21.07.17:921][314]CompilerResultsLog: Info TeamShrug.cpp
+[2016.10.31-21.07.17:921][314]CompilerResultsLog: Info TeamShrugProjectile.cpp
+[2016.10.31-21.07.17:921][314]CompilerResultsLog: Info Mine.cpp
+[2016.10.31-21.07.17:921][314]CompilerResultsLog: Info TeamShrug.generated.cpp
+[2016.10.31-21.07.17:921][314]CompilerResultsLog: Info [11/11] Link UE4Editor-TeamShrug-7062.dll
+[2016.10.31-21.07.17:921][314]CompilerResultsLog: Info    Creating library C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TeamShrug-7062.lib and object C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TeamShrug-7062.exp
+[2016.10.31-21.07.17:921][314]CompilerResultsLog: Info Total build time: 24.01 seconds
+[2016.10.31-21.07.17:921][314]LogMainFrame: MainFrame: Module compiling took 24.196 seconds
+[2016.10.31-21.07.17:965][314]LogClass: Could not find existing class Mine in package /Script/TeamShrug for HotReload, assuming new class
+[2016.10.31-21.07.17:976][314]LogContentBrowser: Native class hierarchy updated for 'TeamShrug' in 0.0028 seconds. Added 5 classes and 3 folders.
+[2016.10.31-21.07.17:978][314]Warning: HotReload successful (1 functions remapped  0 scriptstructs remapped)
+[2016.10.31-21.07.18:245][314]LogContentBrowser: Native class hierarchy populated in 0.0107 seconds. Added 2054 classes and 376 folders.
+[2016.10.31-21.07.18:246][314]Warning: HotReload took 24.5s.
+[2016.10.31-21.07.18:247][314]Warning: HotReload operation took 24.6s.
+[2016.10.31-21.07.18:442][314]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Source/TeamShrug/Public/Mine.h'
+[2016.10.31-21.07.18:512][314]LogVSAccessor:Warning: Couldn't goto line number '0' in 'C:/Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Source/TeamShrug/Private/Mine.cpp'
+[2016.10.31-21.07.18:532][314]LogHotReload: New module detected: UE4Editor-TeamShrug-7062.dll
+[2016.10.31-21.07.18:560][315]LogHotReload: Starting Hot-Reload from IDE
+[2016.10.31-21.07.18:625][315]LogContentBrowser: Native class hierarchy updated for 'TeamShrug' in 0.0032 seconds. Added 5 classes and 3 folders.
+[2016.10.31-21.07.18:628][315]Warning: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2016.10.31-21.07.18:823][315]LogContentBrowser: Native class hierarchy populated in 0.0105 seconds. Added 2054 classes and 376 folders.
+[2016.10.31-21.07.18:828][315]Warning: HotReload took  0.3s.
+[2016.10.31-21.11.34:109][241]LogMetaData: Removing '/Game/FirstPersonCPP/Blueprints/BP_Mine.BP_Mine_C' ref from Metadata '/Game/Blueprints/BP_Mine.PackageMetaData'
+[2016.10.31-21.11.34:109][241]LogMetaData: Removing '/Game/FirstPersonCPP/Blueprints/BP_Mine.BP_Mine:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/Blueprints/BP_Mine.PackageMetaData'
+[2016.10.31-21.11.34:109][241]LogMetaData: Removing '/Game/FirstPersonCPP/Blueprints/BP_Mine.BP_Mine:EventGraph.K2Node_Event_0' ref from Metadata '/Game/Blueprints/BP_Mine.PackageMetaData'
+[2016.10.31-21.11.34:109][241]LogMetaData: Removing '/Game/FirstPersonCPP/Blueprints/BP_Mine.BP_Mine:EventGraph.K2Node_Event_1' ref from Metadata '/Game/Blueprints/BP_Mine.PackageMetaData'
+[2016.10.31-21.11.34:109][241]LogMetaData: Removing '/Game/FirstPersonCPP/Blueprints/BP_Mine.BP_Mine:EventGraph.K2Node_Event_2' ref from Metadata '/Game/Blueprints/BP_Mine.PackageMetaData'
+[2016.10.31-21.11.34:109][241]LogMetaData: Removing '/Game/FirstPersonCPP/Blueprints/BP_Mine.BP_Mine_C:UserConstructionScript' ref from Metadata '/Game/Blueprints/BP_Mine.PackageMetaData'
+[2016.10.31-21.11.34:109][241]LogMetaData: Removing '/Game/FirstPersonCPP/Blueprints/BP_Mine.BP_Mine_C:Sphere' ref from Metadata '/Game/Blueprints/BP_Mine.PackageMetaData'
+[2016.10.31-21.11.34:109][241]LogMetaData: Removing '/Game/FirstPersonCPP/Blueprints/BP_Mine.BP_Mine_C:DefaultSceneRoot' ref from Metadata '/Game/Blueprints/BP_Mine.PackageMetaData'
+[2016.10.31-21.11.34:109][241]LogMetaData: Removing '/Game/FirstPersonCPP/Blueprints/BP_Mine.SKEL_BP_Mine_C:DefaultSceneRoot' ref from Metadata '/Game/Blueprints/BP_Mine.PackageMetaData'
+[2016.10.31-21.11.34:109][241]LogMetaData: Removing '/Game/FirstPersonCPP/Blueprints/BP_Mine.SKEL_BP_Mine_C:Sphere' ref from Metadata '/Game/Blueprints/BP_Mine.PackageMetaData'
+[2016.10.31-21.11.34:109][241]LogMetaData: Removing '/Game/FirstPersonCPP/Blueprints/BP_Mine.SKEL_BP_Mine_C:UserConstructionScript' ref from Metadata '/Game/Blueprints/BP_Mine.PackageMetaData'
+[2016.10.31-21.11.34:109][241]LogMetaData: Removing '/Game/FirstPersonCPP/Blueprints/BP_Mine.SKEL_BP_Mine_C' ref from Metadata '/Game/Blueprints/BP_Mine.PackageMetaData'
+[2016.10.31-21.11.34:139][241]LogSavePackage: Save=8.72ms
+[2016.10.31-21.11.34:139][241]LogSavePackage: Moving '../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Saved/BP_MineDE07CB0F4871AB66B8788892C07F68AA.tmp' to '../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/FirstPersonCPP/Blueprints/BP_Mine.uasset'
+[2016.10.31-21.11.34:142][241]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/FirstPersonCPP/Blueprints/BP_Mine.uasset
+[2016.10.31-21.11.34:146][241]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_Mine" FILE="../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/Blueprints/BP_Mine.uasset" SILENT=true
+[2016.10.31-21.11.34:152][241]LogSavePackage: Save=2.14ms
+[2016.10.31-21.11.34:152][241]LogSavePackage: Moving '../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Saved/BP_Mine7EA59FDA45D1DAE7DB1CF8ADA39EA2E3.tmp' to '../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/Blueprints/BP_Mine.uasset'
+[2016.10.31-21.11.34:154][241]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/Blueprints/BP_Mine.uasset
+[2016.10.31-21.13.52:818][647]LogSlate:Warning: Prevented a slow task dialog from being summoned while a context menu was open
+[2016.10.31-21.13.59:384][430]LogBlueprint:Warning: Reparenting blueprint Blueprint /Game/FirstPersonCPP/Blueprints/BP_Mine.BP_Mine from Actor to Mine...
+[2016.10.31-21.13.59:393][430]BlueprintLog: New page: Compile BP_Mine
+[2016.10.31-21.13.59:902][430]BlueprintEditorCompileResults: Info [0886.46] Compile of BP_Mine successful! [in 508 ms] (/Game/FirstPersonCPP/Blueprints/BP_Mine.BP_Mine)
+[2016.10.31-21.14.02:907][787]LogSlate:Warning: Prevented a slow task dialog from being summoned while a context menu was open
+[2016.10.31-21.14.14:336][680]LogBlueprint:Warning: Reparenting blueprint Blueprint /Game/FirstPersonCPP/Blueprints/BP_Mine.BP_Mine from Mine to Actor...
+[2016.10.31-21.14.14:342][680]BlueprintLog: New page: Compile BP_Mine
+[2016.10.31-21.14.14:715][680]BlueprintEditorCompileResults: Info [0901.28] Compile of BP_Mine successful! [in 372 ms] (/Game/FirstPersonCPP/Blueprints/BP_Mine.BP_Mine)
+[2016.10.31-21.14.16:931][943]LogSlate:Warning: Prevented a slow task dialog from being summoned while a context menu was open
+[2016.10.31-21.14.33:679][786]LogSavePackage: Save=1190.92ms
+[2016.10.31-21.14.33:679][786]LogSavePackage: Moving '../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Saved/FirstPersonExampleMapEA7E7935486EE8770744449561322FD9.tmp' to '../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap'
+[2016.10.31-21.14.33:683][786]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap
+[2016.10.31-21.14.33:700][786]LogFileHelpers: Saving map 'FirstPersonExampleMap' took 1.302
+[2016.10.31-21.14.33:712][786]LogSavePackage: Save=7.38ms
+[2016.10.31-21.14.33:712][786]LogSavePackage: Moving '../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Saved/BP_Mine634B9B6F40166691A7820C85BAE3982B.tmp' to '../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/FirstPersonCPP/Blueprints/BP_Mine.uasset'
+[2016.10.31-21.14.33:714][786]LogSavePackage:Display: Finished SavePackage ../../../../../../Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/Content/FirstPersonCPP/Blueprints/BP_Mine.uasset
+[2016.10.31-21.14.39:469][448]Recompiling TeamShrug...
+[2016.10.31-21.14.39:470][448]Launching UnrealBuildTool... [C:/Program Files (x86)/Epic Games/4.12/Engine/Binaries/DotNET/UnrealBuildTool.exe TeamShrug -ModuleWithSuffix TeamShrug 5647 Win64 Development -editorrecompile -canskiplink "C:/Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/TeamShrug.uproject"  -2015]
+[2016.10.31-21.14.39:475][448]Warning: Starting HotReload took  0.0s.
+[2016.10.31-21.14.48:614][675]CompilerResultsLog: New page: Compilation - 31 Oct 2016 21:14:48
+[2016.10.31-21.14.48:614][675]CompilerResultsLog: Info Creating makefile for hot reloading TeamShrug (working set of source files changed)
+[2016.10.31-21.14.48:615][675]CompilerResultsLog: Info Compiling game modules for hot reload
+[2016.10.31-21.14.48:615][675]CompilerResultsLog: Info Parsing headers for TeamShrugEditor
+[2016.10.31-21.14.48:616][675]CompilerResultsLog: Info   Running UnrealHeaderTool "C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\TeamShrug.uproject" "C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\Build\Win64\TeamShrugEditor\Development\TeamShrugEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2016.10.31-21.14.48:616][675]CompilerResultsLog: Info Reflection code generated for TeamShrugEditor in 2.8299449 seconds
+[2016.10.31-21.14.48:616][675]CompilerResultsLog: Info Performing 3 actions (4 in parallel)
+[2016.10.31-21.14.48:616][675]CompilerResultsLog: Info TeamShrug.generated.cpp
+[2016.10.31-21.14.48:616][675]CompilerResultsLog: Info Mine.cpp
+[2016.10.31-21.14.48:616][675]CompilerResultsLog: Info [3/3] Link UE4Editor-TeamShrug-5647.dll
+[2016.10.31-21.14.48:617][675]CompilerResultsLog: Info    Creating library C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TeamShrug-5647.lib and object C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TeamShrug-5647.exp
+[2016.10.31-21.14.48:617][675]CompilerResultsLog: Info Total build time: 8.64 seconds
+[2016.10.31-21.14.48:617][675]LogMainFrame: MainFrame: Module compiling took 9.151 seconds
+[2016.10.31-21.14.48:661][675]LogClass: Could not find existing class Mine in package /Script/TeamShrug for HotReload, assuming new class
+[2016.10.31-21.14.48:672][675]LogHotReload: Re-instancing Mine after hot-reload.
+[2016.10.31-21.14.48:739][675]LogContentBrowser: Native class hierarchy updated for 'TeamShrug' in 0.0027 seconds. Added 5 classes and 3 folders.
+[2016.10.31-21.14.48:742][675]Warning: HotReload successful (1 functions remapped  0 scriptstructs remapped)
+[2016.10.31-21.14.48:966][675]LogContentBrowser: Native class hierarchy populated in 0.0101 seconds. Added 2054 classes and 376 folders.
+[2016.10.31-21.14.48:966][675]Warning: HotReload took  9.5s.
+[2016.10.31-21.28.31:517][770]Recompiling TeamShrug...
+[2016.10.31-21.28.31:518][770]Launching UnrealBuildTool... [C:/Program Files (x86)/Epic Games/4.12/Engine/Binaries/DotNET/UnrealBuildTool.exe TeamShrug -ModuleWithSuffix TeamShrug 407 Win64 Development -editorrecompile -canskiplink "C:/Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/TeamShrug.uproject"  -2015]
+[2016.10.31-21.28.31:523][770]Warning: Starting HotReload took  0.0s.
+[2016.10.31-21.28.34:142][987]CompilerResultsLog: New page: Compilation - 31 Oct 2016 21:28:34
+[2016.10.31-21.28.34:142][987]CompilerResultsLog: Info Creating makefile for hot reloading TeamShrug (working set of source files changed)
+[2016.10.31-21.28.34:142][987]CompilerResultsLog: Info Compiling game modules for hot reload
+[2016.10.31-21.28.34:142][987]CompilerResultsLog: Info ERROR: In C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\Source\TeamShrug\TeamShrugCharacter.cpp: #include "..\Public\Mine.h" contains backslashes ('\'), please use forward slashes ('/') instead.
+[2016.10.31-21.28.34:143][987]LogMainFrame: MainFrame: Module compiling took 2.630 seconds
+[2016.10.31-21.28.34:143][987]Warning: HotReload failed, recompile failed
+[2016.10.31-21.29.41:613][624]Recompiling TeamShrug...
+[2016.10.31-21.29.41:614][624]Launching UnrealBuildTool... [C:/Program Files (x86)/Epic Games/4.12/Engine/Binaries/DotNET/UnrealBuildTool.exe TeamShrug -ModuleWithSuffix TeamShrug 5366 Win64 Development -editorrecompile -canskiplink "C:/Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/TeamShrug.uproject"  -2015]
+[2016.10.31-21.29.41:619][624]Warning: Starting HotReload took  0.0s.
+[2016.10.31-21.29.44:414][885]CompilerResultsLog: New page: Compilation - 31 Oct 2016 21:29:44
+[2016.10.31-21.29.44:416][885]CompilerResultsLog: Info Creating makefile for hot reloading TeamShrug (working set of source files changed)
+[2016.10.31-21.29.44:416][885]CompilerResultsLog: Info Compiling game modules for hot reload
+[2016.10.31-21.29.44:416][885]CompilerResultsLog: Info ERROR: In C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\Source\TeamShrug\TeamShrugCharacter.cpp: #include "..\Public\Mine.h" contains backslashes ('\'), please use forward slashes ('/') instead.
+[2016.10.31-21.29.44:418][885]LogMainFrame: MainFrame: Module compiling took 2.808 seconds
+[2016.10.31-21.29.44:418][885]Warning: HotReload failed, recompile failed
+[2016.10.31-21.30.44:467][138]Recompiling TeamShrug...
+[2016.10.31-21.30.44:467][138]Launching UnrealBuildTool... [C:/Program Files (x86)/Epic Games/4.12/Engine/Binaries/DotNET/UnrealBuildTool.exe TeamShrug -ModuleWithSuffix TeamShrug 7873 Win64 Development -editorrecompile -canskiplink "C:/Users/James Moran/Desktop/TeamShrugGameJam/TeamShrug/TeamShrug.uproject"  -2015]
+[2016.10.31-21.30.44:472][138]Warning: Starting HotReload took  0.0s.
+[2016.10.31-21.30.54:365][554]CompilerResultsLog: New page: Compilation - 31 Oct 2016 21:30:54
+[2016.10.31-21.30.54:366][554]CompilerResultsLog: Info Creating makefile for hot reloading TeamShrug (working set of source files changed)
+[2016.10.31-21.30.54:366][554]CompilerResultsLog: Info Compiling game modules for hot reload
+[2016.10.31-21.30.54:366][554]CompilerResultsLog: Info Parsing headers for TeamShrugEditor
+[2016.10.31-21.30.54:366][554]CompilerResultsLog: Info   Running UnrealHeaderTool "C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\TeamShrug.uproject" "C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\Build\Win64\TeamShrugEditor\Development\TeamShrugEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2016.10.31-21.30.54:367][554]CompilerResultsLog: Info Reflection code generated for TeamShrugEditor in 3.1243703 seconds
+[2016.10.31-21.30.54:368][554]CompilerResultsLog: Info Performing 5 actions (4 in parallel)
+[2016.10.31-21.30.54:368][554]CompilerResultsLog: Info Mine.cpp
+[2016.10.31-21.30.54:368][554]CompilerResultsLog: Info TeamShrugGameMode.cpp
+[2016.10.31-21.30.54:369][554]CompilerResultsLog: Info TeamShrugCharacter.cpp
+[2016.10.31-21.30.54:370][554]CompilerResultsLog: Info TeamShrug.generated.cpp
+[2016.10.31-21.30.54:370][554]CompilerResultsLog: Info [5/5] Link UE4Editor-TeamShrug-7873.dll
+[2016.10.31-21.30.54:371][554]CompilerResultsLog: Info    Creating library C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TeamShrug-7873.lib and object C:\Users\James Moran\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TeamShrug-7873.exp
+[2016.10.31-21.30.54:371][554]CompilerResultsLog: Info Total build time: 9.63 seconds
+[2016.10.31-21.30.54:372][554]LogMainFrame: MainFrame: Module compiling took 9.908 seconds
+[2016.10.31-21.30.54:737][554]LogHotReload: Re-instancing Mine after hot-reload.
+[2016.10.31-21.30.54:840][554]LogContentBrowser: Native class hierarchy updated for 'TeamShrug' in 0.0034 seconds. Added 5 classes and 3 folders.
+[2016.10.31-21.30.54:843][554]Warning: HotReload successful (1 functions remapped  0 scriptstructs remapped)
+[2016.10.31-21.30.55:123][554]LogContentBrowser: Native class hierarchy populated in 0.0110 seconds. Added 2054 classes and 376 folders.
+[2016.10.31-21.30.55:123][554]Warning: HotReload took 10.7s.
+[2016.10.31-21.31.38:045][673]LogActorComponent: 

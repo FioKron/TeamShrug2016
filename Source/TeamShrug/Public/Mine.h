@@ -12,16 +12,9 @@ class TEAMSHRUG_API AMine : public AActor
 	
 public:	
 
-	// Functions:
-
-	// Sets default values for this actor's properties
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = PrimaryReference)
+	class UStaticMeshComponent* PrimaryReference;
+	
 	AMine();
 
-
-	// Properties:
-
-	// For collision and positional reference whilst playing: 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = ReferenceComponent)
-	class USphereComponent* PrimaryReference;
-	
 };
