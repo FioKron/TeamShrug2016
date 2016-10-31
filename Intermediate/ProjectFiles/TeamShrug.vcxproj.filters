@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\TeamShrug.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{84650369-1262-42E2-984F-7298EC566C33}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TeamShrug.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\TeamShrugEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{27B6CD3A-4475-4EE1-983C-40ABA6982F51}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\TeamShrug">
+      <UniqueIdentifier>{175A9367-2DC8-4389-9E57-B5ECCDFB450C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TeamShrug\TeamShrug.Build.cs">
+      <Filter>Source\TeamShrug</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\TeamShrug\Public">
+      <UniqueIdentifier>{0729155e-c1cc-4402-b8c7-acea59e49642}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\TeamShrug\Private">
+      <UniqueIdentifier>{9b8ece28-e4b4-4d48-a62c-74786a339401}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\TeamShrug\Public\Mine.h">
+      <Filter>Source\TeamShrug\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TeamShrug\TeamShrug.h">
+      <Filter>Source\TeamShrug\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TeamShrug\TeamShrugCharacter.h">
+      <Filter>Source\TeamShrug\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TeamShrug\TeamShrugGameMode.h">
+      <Filter>Source\TeamShrug\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TeamShrug\TeamShrugHUD.h">
+      <Filter>Source\TeamShrug\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TeamShrug\TeamShrugProjectile.h">
+      <Filter>Source\TeamShrug\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\TeamShrug\Private\Mine.cpp">
+      <Filter>Source\TeamShrug\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TeamShrug\TeamShrug.cpp">
+      <Filter>Source\TeamShrug\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TeamShrug\TeamShrugCharacter.cpp">
+      <Filter>Source\TeamShrug\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TeamShrug\TeamShrugGameMode.cpp">
+      <Filter>Source\TeamShrug\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TeamShrug\TeamShrugHUD.cpp">
+      <Filter>Source\TeamShrug\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TeamShrug\TeamShrugProjectile.cpp">
+      <Filter>Source\TeamShrug\Private</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

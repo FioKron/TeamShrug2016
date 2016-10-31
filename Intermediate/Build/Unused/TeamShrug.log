@@ -1,0 +1,15 @@
+﻿Build started 31/10/2016 14:54:48.
+     1>Project "C:\Users\2moraj05\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\ProjectFiles\TeamShrug.vcxproj" on node 3 (Build target(s)).
+     1>Build:
+         "C:\Program Files (x86)\Epic Games\4.12\Engine\Build\BatchFiles\Build.bat" TeamShrugEditor Win64 Development "C:\Users\2moraj05\Desktop\TeamShrugGameJam\TeamShrug\TeamShrug.uproject" -waitmutex
+         Creating makefile for TeamShrugEditor (working set of source files changed)
+         Performing 2 actions (4 in parallel)
+         Mine.cpp
+         [2/2] Link UE4Editor-TeamShrug.dll
+            Creating library C:\Users\2moraj05\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TeamShrug.lib and object C:\Users\2moraj05\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TeamShrug.exp
+         Total build time: 5.01 seconds
+     1>Done Building Project "C:\Users\2moraj05\Desktop\TeamShrugGameJam\TeamShrug\Intermediate\ProjectFiles\TeamShrug.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.21
