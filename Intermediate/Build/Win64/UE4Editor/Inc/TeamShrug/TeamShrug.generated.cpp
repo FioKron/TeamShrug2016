@@ -12,11 +12,11 @@ void EmptyLinkFunctionForGeneratedCode1TeamShrug() {}
 	void AMine::StaticRegisterNativesAMine()
 	{
 	}
-	IMPLEMENT_CLASS(AMine, 4084718473);
+	IMPLEMENT_CLASS(AMine, 3523873617);
 	void ATeamShrugCharacter::StaticRegisterNativesATeamShrugCharacter()
 	{
 	}
-	IMPLEMENT_CLASS(ATeamShrugCharacter, 1387276277);
+	IMPLEMENT_CLASS(ATeamShrugCharacter, 3008590015);
 	void ATeamShrugGameMode::StaticRegisterNativesATeamShrugGameMode()
 	{
 	}
@@ -33,7 +33,7 @@ void EmptyLinkFunctionForGeneratedCode1TeamShrug() {}
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_AActor();
-	ENGINE_API class UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
 	ENGINE_API class UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USoundBase_NoRegister();
@@ -47,6 +47,7 @@ void EmptyLinkFunctionForGeneratedCode1TeamShrug() {}
 	ENGINE_API class UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 
 	TEAMSHRUG_API class UClass* Z_Construct_UClass_AMine_NoRegister();
 	TEAMSHRUG_API class UClass* Z_Construct_UClass_AMine();
@@ -79,7 +80,7 @@ void EmptyLinkFunctionForGeneratedCode1TeamShrug() {}
 
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-				UProperty* NewProp_PrimaryReference = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PrimaryReference"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(PrimaryReference, AMine), 0x00100000000a001d, Z_Construct_UClass_USphereComponent_NoRegister());
+				UProperty* NewProp_PrimaryReference = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("PrimaryReference"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(PrimaryReference, AMine), 0x00100000000a001d, Z_Construct_UClass_UStaticMeshComponent_NoRegister());
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->StaticLink();
 #if WITH_METADATA
@@ -87,10 +88,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("Mine.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Public/Mine.h"));
 				MetaData->SetValue(OuterClass, TEXT("OnlyDefaultConstructorDeclared"), TEXT(""));
-				MetaData->SetValue(NewProp_PrimaryReference, TEXT("Category"), TEXT("ReferenceComponent"));
+				MetaData->SetValue(NewProp_PrimaryReference, TEXT("Category"), TEXT("PrimaryReference"));
 				MetaData->SetValue(NewProp_PrimaryReference, TEXT("EditInline"), TEXT("true"));
 				MetaData->SetValue(NewProp_PrimaryReference, TEXT("ModuleRelativePath"), TEXT("Public/Mine.h"));
-				MetaData->SetValue(NewProp_PrimaryReference, TEXT("ToolTip"), TEXT("For collision and positional reference whilst playing:"));
 #endif
 			}
 		}
@@ -118,6 +118,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_DebugText = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DebugText"), RF_Public|RF_Transient|RF_MarkAsNative) UStrProperty(CPP_PROPERTY_BASE(DebugText, ATeamShrugCharacter), 0x0010000000020015);
 				UProperty* NewProp_FireAnimation = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("FireAnimation"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(FireAnimation, ATeamShrugCharacter), 0x0010000000000005, Z_Construct_UClass_UAnimMontage_NoRegister());
 				UProperty* NewProp_FireSound = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("FireSound"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(FireSound, ATeamShrugCharacter), 0x0010000000000005, Z_Construct_UClass_USoundBase_NoRegister());
 				UProperty* NewProp_ProjectileClass = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("ProjectileClass"), RF_Public|RF_Transient|RF_MarkAsNative) UClassProperty(CPP_PROPERTY_BASE(ProjectileClass, ATeamShrugCharacter), 0x0014000000010001, Z_Construct_UClass_ATeamShrugProjectile_NoRegister(), UClass::StaticClass());
@@ -137,6 +138,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("TeamShrugCharacter.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("TeamShrugCharacter.h"));
 				MetaData->SetValue(OuterClass, TEXT("OnlyDefaultConstructorDeclared"), TEXT(""));
+				MetaData->SetValue(NewProp_DebugText, TEXT("Category"), TEXT("Debug"));
+				MetaData->SetValue(NewProp_DebugText, TEXT("ModuleRelativePath"), TEXT("TeamShrugCharacter.h"));
+				MetaData->SetValue(NewProp_DebugText, TEXT("ToolTip"), TEXT("For debug messages"));
 				MetaData->SetValue(NewProp_FireAnimation, TEXT("Category"), TEXT("Gameplay"));
 				MetaData->SetValue(NewProp_FireAnimation, TEXT("ModuleRelativePath"), TEXT("TeamShrugCharacter.h"));
 				MetaData->SetValue(NewProp_FireAnimation, TEXT("ToolTip"), TEXT("AnimMontage to play each time we fire"));
@@ -339,7 +343,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/TeamShrug")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x5EEB0A03;
+			Guid.A = 0x50C0FBF6;
 			Guid.B = 0xE4747A1E;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
