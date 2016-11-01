@@ -12,5 +12,7 @@ AMine::AMine()
 
 	PrimaryReference = CreateDefaultSubobject<UStaticMeshComponent>("PrimaryReference");
 	PrimaryReference->SetVisibility(true);
-	PrimaryReference->SetHiddenInGame(true);
+	PrimaryReference->SetHiddenInGame(false);
+	PrimaryReference->SetSimulatePhysics(false);
+	PrimaryReference->bGenerateOverlapEvents = true;
 }

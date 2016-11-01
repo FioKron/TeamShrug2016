@@ -13,6 +13,9 @@ DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
 ATeamShrugCharacter::ATeamShrugCharacter()
 {
+	// For tick to function:
+	PrimaryActorTick.bCanEverTick = true;
+
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
 
@@ -48,9 +51,61 @@ ATeamShrugCharacter::ATeamShrugCharacter()
 
 	// Default offset from the character location for projectiles to spawn
 	GunOffset = FVector(100.0f, 30.0f, 10.0f);
+	DebugText = "Default";
 
 	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P are set in the
 	// derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+}
+
+/**
+	Both of these functions check for mine proximity:
+*/
+void ATeamShrugCharacter::BeginMineOverlap(AActor* OverlappingActor, FString ActiveBox, float NewIntensity)
+{
+	if (Cast<AMine>(OverlappingActor)->IsValidLowLevel())
+	{
+		DebugText = ActiveBox;
+		VibrationIntensity = NewIntensity;	
+	}	
+}
+
+void ATeamShrugCharacter::EndMineOverlap(AActor* OverlappingActor)
+{
+	if (Cast<AMine>(OverlappingActor)->IsValidLowLevel())
+	{
+		IsOverlap = false;
+		DebugText = "None";
+	}
+}
+
+void ATeamShrugCharacter::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{	
+	AMine* IsOtherMineCheck = Cast<AMine>(Other);
+
+	if (IsOtherMineCheck->IsValidLowLevel())
+	{
+		DebugText = "Dead";	
+	}
+}
+
+void ATeamShrugCharacter::Tick(float DeltaTime)
+{
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Emerald, DebugText);
+
+		if (IsOverlap)
+		{
+			APlayerController* PlayerCharacterController = Cast<APlayerController>(GetController());
+
+			if (PlayerCharacterController->IsValidLowLevel())
+			{
+				PlayerCharacterController->PlayDynamicForceFeedback(VibrationIntensity, 0.1f, 
+					true, true, true, true, EDynamicForceFeedbackAction::Type::Start, 
+					FLatentActionInfo::FLatentActionInfo());
+			}
+		}
+	}
 }
 
 void ATeamShrugCharacter::BeginPlay()
