@@ -1,7 +1,6 @@
 // Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
 #pragma once
 #include "GameFramework/Character.h"
-#include "Public/Mine.h"
 #include "TeamShrugCharacter.generated.h"
 
 class UInputComponent;
@@ -26,58 +25,10 @@ class ATeamShrugCharacter : public ACharacter
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FirstPersonCameraComponent;
-
-	// So that the 'Hit' method would not have to receive a call from Blueprint
-	virtual void NotifyHit(
-		class UPrimitiveComponent* MyComp,
-		AActor* Other,
-		class UPrimitiveComponent* OtherComp,
-		bool bSelfMoved,
-		FVector HitLocation,
-		FVector HitNormal,
-		FVector NormalImpulse,
-		const FHitResult& Hit
-	)override;
-
-	// For handling tick behavior
-	virtual void Tick(float DeltaTime)override;
-
 public:
-	
-	// Functions:
-
 	ATeamShrugCharacter();
 
 	virtual void BeginPlay();
-	
-	/** 
-		For the 4 respective box components
-		on this character signifying the end 
-		of mine overlap:
-
-		@Param: AActor* OverlappingActor: The actor
-		to cast to AMine, if successful, this function has results
-	*/
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Mine Overlap Ends"), Category = Proximity)
-	void EndMineOverlap(AActor* OverlappingActor);
-
-	/**
-		For the 5 respective box components
-		on this character signifying the beginning
-		of mine overlap:
-
-		@Params: AActor* OverlappingActor: The actor
-		to cast to AMine, if successful, this function has results
-
-		FString ActiveBox: To set DebugText
-		to the current active box
-
-		float Intensity: The intensity of controller vibration
-	*/
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Mine Overlap Begins"), Category = Proximity)
-	void BeginMineOverlap(AActor* OverlappingActor, FString ActiveBox, float NewIntensity);
-
-	// Properties:
 
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
@@ -102,24 +53,6 @@ public:
 	/** AnimMontage to play each time we fire */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	class UAnimMontage* FireAnimation;
-
-	/**
-		For debug messages
-	*/
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Debug)
-	FString DebugText;
-
-	/**
-		Flags:
-	*/
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Flags)
-	bool IsOverlap;
-
-	/**
-		For the intensity of controller vibration (rumble):
-	*/
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Feedback)
-	float VibrationIntensity;
 
 protected:
 	
