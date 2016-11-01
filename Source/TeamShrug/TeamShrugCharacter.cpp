@@ -48,22 +48,10 @@ ATeamShrugCharacter::ATeamShrugCharacter()
 
 	// Default offset from the character location for projectiles to spawn
 	GunOffset = FVector(100.0f, 30.0f, 10.0f);
-	DebugText = "Default";
 
 	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P are set in the
 	// derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
-
-void ATeamShrugCharacter::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
-{	
-	AMine* IsOtherMineCheck = Cast<AMine>(Other);
-
-	if (IsOtherMineCheck->IsValidLowLevel())
-	{
-		DebugText = "Dead";
-	}
-}
-
 
 void ATeamShrugCharacter::BeginPlay()
 {
