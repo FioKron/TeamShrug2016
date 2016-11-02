@@ -15,6 +15,8 @@ class TEAMSHRUG_API UTeamShrugSaveGame : public USaveGame
 	
 public:
 
+	// Properties:
+
 	UPROPERTY(VisibleAnywhere, Category = Basic)
 	FString PlayerID;
 
@@ -23,9 +25,21 @@ public:
 	
 	UPROPERTY(VisibleAnywhere, Category = Basic)
 	FString SaveSlotName;
-
 	
 
 	UPROPERTY(VisibleAnywhere, Category = Basic)
-	uint32 UserIndex;
+	int UserIndex;
+
+	// Functions:
+	
+
+	/**
+		Saving and loading the game:
+	*/
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Save Player Stat."), Category = Highscore)
+	void SaveScore(FString NewPlayerID, int NewPlayerEndScore, 
+		FString NewSaveSlotName, int NewUserIndex);
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Load Player Stat."), Category = Highscore)
+	void LoadScore(FString SaveGameSaveSlotName, int SaveGameUserIndex);
 };
