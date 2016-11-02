@@ -4,6 +4,7 @@
 #define __TEAMSHRUG_H__
 
 #include "EngineMinimal.h"
-
-
+#include "Engine.h"
+#include "TeamShrugSaveGame.h"
+#include "Kismet/GameplayStatics.h"
 #endif

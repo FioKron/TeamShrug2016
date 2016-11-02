@@ -13,6 +13,9 @@ DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
 ATeamShrugCharacter::ATeamShrugCharacter()
 {
+	// For tick to function:
+	PrimaryActorTick.bCanEverTick = true;
+
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
 
@@ -48,9 +51,113 @@ ATeamShrugCharacter::ATeamShrugCharacter()
 
 	// Default offset from the character location for projectiles to spawn
 	GunOffset = FVector(100.0f, 30.0f, 10.0f);
+	
+	// Initilise the custom member parameters:
+	DebugText.Add("Default");
+	VibrationIntensity = 0.05f;
+	MinimumCountdown = 4.0f;
+	Countdown = 0.0f;
+	DefusalTime = 5.0f;
+	bDefusing = false;
+	CurrentScore = 0;
+	TickTimer = 0.0f;
 
 	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P are set in the
 	// derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+}
+
+/**
+	Both of these functions check for mine proximity:
+*/
+void ATeamShrugCharacter::BeginMineOverlap(AActor* OverlappingActor, FString ActiveBox, float NewIntensity, float NewMinimumCountdown)
+{
+	if (Cast<AMine>(OverlappingActor)->IsValidLowLevel())
+	{
+		bIsOverlap = true;
+		MinimumCountdown = NewMinimumCountdown;
+		DebugText[0] = ActiveBox;
+		
+		// For the handling the new debug message ('Out of Range!'):
+		if (DebugText[0] != "Box1" && !(DebugText.IsValidIndex(1)))
+		{
+			DebugText.Add("Out of Range!");
+		}
+		else if (DebugText[0] != "Box1" && DebugText.IsValidIndex(1))
+		{
+			DebugText[1] = "Out of Range!";
+		}
+		
+		VibrationIntensity = NewIntensity;	
+	}	
+}
+
+void ATeamShrugCharacter::EndMineOverlap(AActor* OverlappingActor)
+{
+	if (Cast<AMine>(OverlappingActor)->IsValidLowLevel())
+	{
+		bIsOverlap = false;
+		DebugText[0] = "None";
+		MinimumCountdown = 4.0f;
+		if (!(DebugText.IsValidIndex(1)))
+		{
+			DebugText.Add("Nothing to Defuse!");
+		}
+		else if (DebugText.IsValidIndex(1))
+		{
+			DebugText[1] = "Nothing to Defuse!";
+		}
+	}
+}
+
+void ATeamShrugCharacter::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{	
+	AMine* IsOtherMineCheck = Cast<AMine>(Other);
+
+	if (IsOtherMineCheck->IsValidLowLevel())
+	{
+		DebugText[0] = "Dead";	
+	}
+}
+
+void ATeamShrugCharacter::Tick(float DeltaTime)
+{
+	// For timing:
+	TickTimer += DeltaTime;
+	
+	// For avoiding null pointer exceptions:
+	if (GEngine)
+	{
+		if (bDefusing)
+		{
+			
+		}
+		else
+		{
+
+		}
+
+		if (TickTimer >= 1.0f)
+		{
+			for (int Counter = 0; Counter < DebugText.Num(); Counter++)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Emerald, DebugText[Counter]);
+			}
+			
+			TickTimer = 0.0f;
+		}
+		
+		if (bIsOverlap)
+		{
+			APlayerController* PlayerCharacterController = Cast<APlayerController>(GetController());
+
+			if (PlayerCharacterController->IsValidLowLevel())
+			{
+				PlayerCharacterController->PlayDynamicForceFeedback(VibrationIntensity, 0.1f, 
+					true, true, true, true, EDynamicForceFeedbackAction::Type::Start, 
+					FLatentActionInfo::FLatentActionInfo());
+			}
+		}
+	}
 }
 
 void ATeamShrugCharacter::BeginPlay()
