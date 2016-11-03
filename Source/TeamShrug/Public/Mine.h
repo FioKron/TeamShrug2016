@@ -12,9 +12,10 @@ class TEAMSHRUG_API AMine : public AActor
 	
 public:	
 
+	/**
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = PrimaryReference)
 	class UStaticMeshComponent* PrimaryReference;
-	
+	*/
 	AMine();
 
 };

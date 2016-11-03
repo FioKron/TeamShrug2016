@@ -109,6 +109,7 @@ void ATeamShrugCharacter::EndMineOverlap(AActor* OverlappingActor)
 	}
 }
 
+/**
 void ATeamShrugCharacter::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {	
 	AMine* IsOtherMineCheck = Cast<AMine>(Other);
@@ -159,7 +160,7 @@ void ATeamShrugCharacter::Tick(float DeltaTime)
 		}
 	}
 }
-
+*/
 void ATeamShrugCharacter::BeginPlay()
 {
 	// Call the base class  

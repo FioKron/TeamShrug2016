@@ -28,7 +28,7 @@ class ATeamShrugCharacter : public ACharacter
 	class UCameraComponent* FirstPersonCameraComponent;
 
 	// So that the 'Hit' method would not have to receive a call from Blueprint
-	virtual void NotifyHit(
+	/**virtual void NotifyHit(
 		class UPrimitiveComponent* MyComp,
 		AActor* Other,
 		class UPrimitiveComponent* OtherComp,
@@ -42,7 +42,7 @@ class ATeamShrugCharacter : public ACharacter
 	/**
 		For handling tick behavior
 	*/
-	virtual void Tick(float DeltaTime)override;
+	//virtual void Tick(float DeltaTime)override;
 
 	/** 
 		For handling timing during tick

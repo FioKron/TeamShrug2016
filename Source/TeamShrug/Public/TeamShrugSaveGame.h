@@ -17,29 +17,29 @@ public:
 
 	// Properties:
 
-	UPROPERTY(VisibleAnywhere, Category = Basic)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Basic)
 	FString PlayerID;
 
-	UPROPERTY(VisibleAnywhere, Category = Basic)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Basic)
 	int PlayerEndScore;
 	
-	UPROPERTY(VisibleAnywhere, Category = Basic)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Basic)
 	FString SaveSlotName;
 	
 
-	UPROPERTY(VisibleAnywhere, Category = Basic)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Basic)
 	int UserIndex;
 
 	// Functions:
-	
+
+	UTeamShrugSaveGame();
 
 	/**
 		Saving and loading the game:
 	*/
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Save Player Stat."), Category = Highscore)
-	void SaveScore(FString NewPlayerID, int NewPlayerEndScore, 
-		FString NewSaveSlotName, int NewUserIndex);
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Save Game To Slot"), Category = Highscore)
+	void SaveScore(FString NewPlayerID, int NewPlayerEndScore);
 
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Load Player Stat."), Category = Highscore)
-	void LoadScore(FString SaveGameSaveSlotName, int SaveGameUserIndex);
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Load Game From Slot"), Category = Highscore)
+	void LoadScore(FString SaveGameSaveSlotName, int SaveGameUserIndex);	
 };

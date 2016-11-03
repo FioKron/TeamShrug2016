@@ -4,13 +4,20 @@
 #include "TeamShrugSaveGame.h"
 
 
-void UTeamShrugSaveGame::SaveScore(FString NewPlayerID, int NewPlayerEndScore,
-	FString NewSaveSlotName, int NewUserIndex)
+UTeamShrugSaveGame::UTeamShrugSaveGame()
 {
-	PlayerID = NewPlayerID;
-	PlayerEndScore = NewPlayerEndScore;
-	SaveSlotName = NewSaveSlotName;
-	UserIndex = NewUserIndex;
+	SaveSlotName = "TestSaveSlot";
+	UserIndex = 0;
+}
+
+void UTeamShrugSaveGame::SaveScore(FString NewPlayerID, int NewPlayerEndScore)
+{
+	UTeamShrugSaveGame* SaveGamePointer = Cast<UTeamShrugSaveGame>(UGameplayStatics::CreateSaveGameObject(UTeamShrugSaveGame::StaticClass()));
+
+	SaveGamePointer->PlayerID = NewPlayerID;
+	SaveGamePointer->PlayerEndScore = NewPlayerEndScore;
+
+	UGameplayStatics::SaveGameToSlot(SaveGamePointer, SaveGamePointer->SaveSlotName, SaveGamePointer->UserIndex);
 }
 
 void UTeamShrugSaveGame::LoadScore(FString SaveGameSaveSlotName, int SaveGameUserIndex)
